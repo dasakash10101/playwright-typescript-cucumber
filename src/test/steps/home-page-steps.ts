@@ -1,5 +1,4 @@
 import { Given, Then } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
 import { pageFixture } from "../../hooks/pageFixture";
 import { HomePage } from "../page-objects/home-page";
 
@@ -16,4 +15,17 @@ Then("I should see the home page title", async function () {
 Then("I should see the home page URL", async function () {
   const homepage = new HomePage(pageFixture.page);
   await homepage.verifyUrl();
+});
+
+Then(
+  "I should {string} see the home page URL",
+  async function (action: string) {
+    const homepage = new HomePage(pageFixture.page);
+    await homepage.verifyUrl();
+  },
+);
+
+Then("I should see the {string} menu item availabe", async function (string) {
+  const homepage = new HomePage(pageFixture.page);
+  await homepage.verifyMenuItem(string);
 });

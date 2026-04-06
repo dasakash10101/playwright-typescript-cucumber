@@ -5,7 +5,7 @@ import PageObjectWrapper from "./page-object-wrapper";
 
 export class HomePage extends PageObjectWrapper {
   constructor(page: Page) {
-    super(page, page.locator("body"));
+    super(page, page.locator(".nav"));
   }
 
   async launch() {
@@ -18,5 +18,14 @@ export class HomePage extends PageObjectWrapper {
   async verifyUrl() {
     const currentUrl = this.page.url();
     expect(currentUrl).toBe(homepageData.url);
+  }
+  async verifyMenuItem(menuItem: string) {
+    const menuItemLocator = this.rootLocator.getByRole("link", {
+      name: menuItem,
+    });
+    await expect(menuItemLocator).toBeVisible();
+    expect(await menuItemLocator.getAttribute("href")).toContain(
+      menuItem.toLowerCase(),
+    );
   }
 }

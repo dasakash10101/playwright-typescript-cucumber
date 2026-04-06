@@ -8,6 +8,7 @@ export const config = {
   baseURL: process.env.BASE_URL || "https://automationexercise.com/",
   environment: process.env.ENVIRONMENT || "prod",
   headless: process.env.HEADLESS === "true",
+  browser: process.env.BROWSER || "chromium",
 };
 
 export default config;
