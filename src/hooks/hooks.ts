@@ -17,6 +17,7 @@ import {
 import { pageFixture } from "./pageFixture";
 import config from "../helper/config";
 import { timeout } from "../helper/testdata";
+import { pause } from "../helper/utils";
 
 let browser: Browser;
 let context: BrowserContext;
@@ -43,6 +44,10 @@ Before(async ({ pickle }) => {
   console.log(
     `================= Starting scenario: ${pickle.name} =====================`,
   );
+  if (config.debug) {
+    await pause();
+    setDefaultTimeout(0);
+  }
 });
 
 BeforeStep(async ({ pickleStep }) => {

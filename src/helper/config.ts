@@ -1,3 +1,4 @@
+import { debug } from "console";
 import dotenv from "dotenv";
 import path from "path";
 
@@ -9,6 +10,7 @@ export const config = {
   environment: process.env.ENVIRONMENT || "prod",
   headless: process.env.HEADLESS === "true",
   browser: process.env.BROWSER || "chromium",
+  debug: process.env.DEBUG === "true",
 };
 
 export default config;

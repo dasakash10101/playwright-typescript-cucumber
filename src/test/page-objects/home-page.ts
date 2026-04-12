@@ -1,11 +1,18 @@
 import { type Page } from "playwright";
 import { homepageData } from "../../helper/testdata";
-import { expect } from "playwright/test";
+import { expect, Locator } from "playwright/test";
 import PageObjectWrapper from "./page-object-wrapper";
 
 export class HomePage extends PageObjectWrapper {
+  readonly logoutLink: Locator;
+  readonly deleteProfileLink: Locator;
+
   constructor(page: Page) {
     super(page, page.locator(".nav"));
+    this.logoutLink = this.rootLocator.getByRole("link", { name: "Logout" });
+    this.deleteProfileLink = this.rootLocator.getByRole("link", {
+      name: "Delete Account",
+    });
   }
 
   async launch() {
@@ -19,13 +26,8 @@ export class HomePage extends PageObjectWrapper {
     const currentUrl = this.page.url();
     expect(currentUrl).toBe(homepageData.url);
   }
-  async verifyMenuItem(menuItem: string) {
-    const menuItemLocator = this.rootLocator.getByRole("link", {
-      name: menuItem,
-    });
-    await expect(menuItemLocator).toBeVisible();
-    expect(await menuItemLocator.getAttribute("href")).toContain(
-      menuItem.toLowerCase(),
-    );
+  async verifyLoggedInStatus() {
+    await expect(this.logoutLink).toBeVisible();
+    await expect(this.deleteProfileLink).toBeVisible();
   }
 }
