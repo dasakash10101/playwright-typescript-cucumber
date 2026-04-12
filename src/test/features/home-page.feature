@@ -1,3 +1,4 @@
+@homePage
 Feature: Home Page
     As a user
     I want to be able to launch the application
