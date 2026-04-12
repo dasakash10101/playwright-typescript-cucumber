@@ -8,7 +8,6 @@ node_modules/
 
 # Test results
 test-results/
-cucumber.json
 @rerun.txt
 
 # IDE
