@@ -9,3 +9,7 @@ export const homepageData = {
   url: `${config.baseURL}`,
   title: "Automation Exercise",
 };
+export const loginSignupData = {
+  url: `${config.baseURL}/login`,
+  title: "Automation Exercise - Signup / Login",
+};
