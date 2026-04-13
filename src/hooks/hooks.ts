@@ -25,11 +25,11 @@ let context: BrowserContext;
 setDefaultTimeout(timeout.default);
 
 BeforeAll(async () => {
-  if (config.browser === "chromium") {
+  if (config.browser.toLocaleLowerCase() === "chromium") {
     browser = await chromium.launch({ headless: config.headless });
-  } else if (config.browser === "firefox") {
+  } else if (config.browser.toLocaleLowerCase() === "firefox") {
     browser = await firefox.launch({ headless: config.headless });
-  } else if (config.browser === "webkit") {
+  } else if (config.browser.toLocaleLowerCase() === "webkit") {
     browser = await webkit.launch({ headless: config.headless });
   } else {
     throw new Error(`Unsupported browser: ${config.browser}`);
