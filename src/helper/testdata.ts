@@ -10,11 +10,11 @@ export const homepageData = {
   title: "Automation Exercise",
 };
 export const loginData = {
-  url: `${config.baseURL}/login`,
+  url: `${config.baseURL}login`,
   title: "Automation Exercise - Signup / Login",
 };
 export const signupData = {
-  url: `${config.baseURL}/signup`,
+  url: `${config.baseURL}signup`,
   title: "Automation Exercise - Signup",
   name: "Test User",
   email: `testuser${Date.now()}@yopmail.com`,
