@@ -1,6 +1,6 @@
 import { Given, Then } from "@cucumber/cucumber";
 import { pageFixture } from "../../hooks/pageFixture";
-import { HomePage } from "../page-objects/home-page";
+import { HomePage } from "../page-objects/ui/home-page";
 
 Given("I am on the home page", async function () {
   const homepage = new HomePage(pageFixture.page);

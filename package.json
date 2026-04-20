@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npx ts-node src/helper/init.ts",
-    "test": "cucumber-js test --tags \"@signUpSuccess\" || true",
+    "ui-test": "cucumber-js test --tags \"@ui\" || true",
+    "api-test": "cucumber-js test --tags \"@api\" || true",
     "posttest": "npx ts-node src/helper/report.ts"
   },
   "keywords": [],
@@ -25,6 +26,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/node": "^25.5.2"
+    "@types/node": "^25.5.2",
+    "ajv": "^8.18.0"
   }
 }

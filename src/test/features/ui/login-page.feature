@@ -1,8 +1,8 @@
-@loginPage
+@loginPage @ui
 Feature: Login Page
-    As a user
-    I want to be able to log in to the application
-    So that I can access my account and use the features
+  As a user
+  I want to be able to log in to the application
+  So that I can access my account and use the features
 
   @smoke @loginSuccess
   Scenario: Successful login with valid credentials

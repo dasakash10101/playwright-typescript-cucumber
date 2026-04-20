@@ -1,7 +1,7 @@
 import { type Page } from "playwright";
-import { homepageData } from "../../helper/testdata";
 import { expect, Locator } from "playwright/test";
 import PageObjectWrapper from "./page-object-wrapper";
+import { homepageData } from "../../../helper/testdata";
 
 export class HomePage extends PageObjectWrapper {
   readonly logoutLink: Locator;

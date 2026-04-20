@@ -1,4 +1,4 @@
-@signUpPage
+@signUpPage @ui
 Feature: Sign Up / Register
 
     As a new user

@@ -6,7 +6,7 @@ import path from "path";
 dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 export const config = {
-  baseURL: process.env.BASE_URL || "https://automationexercise.com/",
+  baseURL: process.env.BASE_URL,
   environment: process.env.ENVIRONMENT || "prod",
   headless: process.env.HEADLESS === "true",
   browser: process.env.BROWSER || "chromium",

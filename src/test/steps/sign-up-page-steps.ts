@@ -1,9 +1,9 @@
 import { Given, Then, When } from "@cucumber/cucumber";
 import { pageFixture } from "../../hooks/pageFixture";
-import { MenuNav } from "../page-objects/menu-navigation";
 import { loginData, signupData } from "../../helper/testdata";
-import { SignUpPage } from "../page-objects/signup-page";
-import { HomePage } from "../page-objects/home-page";
+import { SignUpPage } from "../page-objects/ui/signup-page";
+import { MenuNav } from "../page-objects/ui/menu-navigation";
+import { HomePage } from "../page-objects/ui/home-page";
 
 Given("I Navigate to the login-sign-up page", async function () {
   const menu = new MenuNav(pageFixture.page);

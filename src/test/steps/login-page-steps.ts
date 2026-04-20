@@ -1,6 +1,6 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import { SignUpPage } from "../page-objects/signup-page";
 import { pageFixture } from "../../hooks/pageFixture";
+import { SignUpPage } from "../page-objects/ui/signup-page";
 
 Given("I am on the login page", async function () {
   const loginPage = new SignUpPage(pageFixture.page);
