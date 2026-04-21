@@ -1,5 +1,5 @@
-@signUpPage @ui
-Feature: Sign Up / Register
+@signUpPage @ui @e2e
+Feature: UI - Sign Up / Register
 
     As a new user
     I want to be able to sign up for an account

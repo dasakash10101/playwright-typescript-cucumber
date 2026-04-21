@@ -1,4 +1,4 @@
-@api
+@api @e2e
 Feature: Products API
 
     As a quality assurance engineer

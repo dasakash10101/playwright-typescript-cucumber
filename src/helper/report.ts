@@ -6,6 +6,8 @@ report.generate({
   reportName: "Playwright Automation Report",
   pageTitle: "Ecomm App test report",
   displayDuration: false,
+  screenshotsDirectory: "test-results/screenshots",
+  storeScreenshots: true,
   metadata: {
     browser: {
       name: "chrome",

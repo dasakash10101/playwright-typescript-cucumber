@@ -7,6 +7,7 @@
     "pretest": "npx ts-node src/helper/init.ts",
     "ui-test": "cucumber-js test --tags \"@ui\" || true",
     "api-test": "cucumber-js test --tags \"@api\" || true",
+    "e2e-test": "cucumber-js test --tags \"@e2e\" || true",
     "posttest": "npx ts-node src/helper/report.ts"
   },
   "keywords": [],

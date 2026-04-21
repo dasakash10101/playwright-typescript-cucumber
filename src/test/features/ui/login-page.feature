@@ -1,5 +1,5 @@
-@loginPage @ui
-Feature: Login Page
+@loginPage @ui @e2e
+Feature: UI - Login Page
   As a user
   I want to be able to log in to the application
   So that I can access my account and use the features

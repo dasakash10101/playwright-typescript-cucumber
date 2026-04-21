@@ -1,5 +1,5 @@
-@homePage @ui
-Feature: Home Page
+@homePage @ui @e2e
+Feature: UI - Home Page
   As a user
   I want to be able to launch the application
   So that I can access the home page and use the features
