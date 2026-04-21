@@ -18,12 +18,25 @@ export class ProductsAPI extends MethodWrapper {
     };
   }
 
+  async postProducts(payload: object) {
+    const response = await this.postRequest(payload);
+    const body = await response.json();
+    return {
+      status: response.status(),
+      body: body,
+    };
+  }
+
+  async ProductRequestStatus(response: string) {
+    await this.validateRequestStatus(response);
+  }
+
   async productResponseStatus(response: string, expectedStatus: number) {
     await this.validateResponseStatus(response, expectedStatus);
   }
 
-  async productResponseBodyLength(responseBody: any, expectedData: any) {
-    await this.validateResponseBodyLength(responseBody, expectedData);
+  async productResponseMessage(message: any, expectedData: any) {
+    await this.validateResponseMessage(message, expectedData);
   }
 
   async validateProductSchema(responseBody: any) {

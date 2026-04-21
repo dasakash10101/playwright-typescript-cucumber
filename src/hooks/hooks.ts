@@ -16,7 +16,7 @@ import {
 } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 import config from "../helper/config";
-import { timeout } from "../helper/testdata";
+import { timeout } from "../helper/ui-testdata";
 import { pause } from "../helper/utils";
 
 let browser: Browser;

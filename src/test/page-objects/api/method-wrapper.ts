@@ -24,11 +24,15 @@ export default class MethodWrapper {
     return response;
   }
 
+  async validateRequestStatus(response: string) {
+    expect(response).toBe(200);
+  }
+
   async validateResponseStatus(response: string, expectedStatus: number) {
     expect(response).toBe(expectedStatus);
   }
 
-  async validateResponseBodyLength(responseBody: any, expectedData: any) {
-    expect(responseBody).toHaveLength(expectedData);
+  async validateResponseMessage(message: any, expectedData: any) {
+    expect(message).toBe(expectedData);
   }
 }

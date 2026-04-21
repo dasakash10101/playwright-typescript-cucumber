@@ -1,7 +1,7 @@
 import { Page } from "playwright";
 import PageObjectWrapper from "./page-object-wrapper";
 import { expect, Locator } from "playwright/test";
-import { signupData } from "../../../helper/testdata";
+import { signupData } from "../../../helper/ui-testdata";
 
 export class SignUpPage extends PageObjectWrapper {
   readonly nameTextBox: Locator;

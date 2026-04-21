@@ -1,6 +1,6 @@
 import { Given, Then, When } from "@cucumber/cucumber";
 import { pageFixture } from "../../hooks/pageFixture";
-import { loginData, signupData } from "../../helper/testdata";
+import { loginData, signupData } from "../../helper/ui-testdata";
 import { SignUpPage } from "../page-objects/ui/signup-page";
 import { MenuNav } from "../page-objects/ui/menu-navigation";
 import { HomePage } from "../page-objects/ui/home-page";
