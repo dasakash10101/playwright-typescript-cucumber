@@ -8,10 +8,13 @@ export class MenuNav extends PageObjectWrapper {
   }
 
   async clickMenuItem(menuItem: string, landingPageTitle: string) {
+    //locate
     const menuItemLocator = this.rootLocator.getByRole("link", {
       name: menuItem,
     });
+    //act
     await menuItemLocator.click();
+    //assert
     expect(await this.page.title()).toBe(landingPageTitle);
   }
 }
